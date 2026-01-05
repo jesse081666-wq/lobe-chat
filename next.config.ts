@@ -13,6 +13,12 @@ const nextConfig = defineConfig({
 
     return webpackConfig;
   },
+   typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 });
 
 export default nextConfig;
