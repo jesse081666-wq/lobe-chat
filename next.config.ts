@@ -13,12 +13,15 @@ const nextConfig = defineConfig({
 
     return webpackConfig;
   },
-   typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-});
+} as any) as any;
+
+// 添加 TypeScript 和 ESLint 配置
+(nextConfig as any).typescript = {
+  ignoreBuildErrors: true,
+};
+
+(nextConfig as any).eslint = {
+  ignoreDuringBuilds: true,
+};
 
 export default nextConfig;
