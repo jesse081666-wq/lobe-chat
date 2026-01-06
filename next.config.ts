@@ -5,7 +5,7 @@ const nextConfig = defineConfig({
     webpackBuildWorker: true,
     webpackMemoryOptimizations: true,
   },
-  webpack: (webpackConfig, context) => {
+  webpack: (webpackConfig: any, context: any) => {
     const { dev } = context;
     if (!dev) {
       webpackConfig.cache = false;
